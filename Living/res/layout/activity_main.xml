@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@android:color/white"  >
+
+        <FrameLayout
+            android:id="@+id/msg_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" 
+            android:background="@android:color/white" >
+
+            <TextView
+                android:id="@+id/tv_wb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" 
+            android:background="@android:color/white" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" 
+            android:background="@android:color/white" />
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:showDividers="middle"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:divider="@drawable/divider"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:background="@android:color/white" >
+
+            <RadioButton
+                android:id="@+id/radio_button0"
+                style="@style/main_tab_bottom"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="2.0dip"
+                android:tag="radio_button0"
+                android:text="每日精选" />
+
+            <RadioButton
+                android:id="@+id/radio_button1"
+                style="@style/main_tab_bottom"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="2.0dip"
+                android:tag="radio_button1"
+                android:text="房屋分类" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

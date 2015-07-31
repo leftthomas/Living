@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.living.ui"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- normal permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许应用打开网络套接口 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Push SDK权限 -->
+    <permission
+        android:name="cn.bmob.permission.push"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <uses-permission android:name="cn.bmob.permission.push" />
+    <!-- 添加自定义的权限 -->
+    <application
+        android:name="com.living.CustomApplcation"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".DailyActivity"
+            android:label="@string/title_activity_daily" >
+        </activity>
+        <activity
+            android:name=".AssortmentActivity"
+            android:label="@string/title_activity_assortment" >
+        </activity>
+        <activity
+            android:name=".HouseDetailActivity"
+            android:label="@string/title_activity_house_detail" >
+        </activity>
+        <activity
+            android:name=".AssortmentListActivity"
+            android:label="@string/title_activity_assortment_list" >
+        </activity>
+    </application>
+
+</manifest>
